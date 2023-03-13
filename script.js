@@ -14,14 +14,14 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts(); 
-  var passwordText = document.querySelector("#password");
+  var truePrompts = getPrompts(); 
+  var passText = document.querySelector("#password");
 
-  if (correctPrompts) {
+  if (truePrompts) {
     var newPassword = generatePassword();
-    passwordText.value = newPassword;
+    passText.value = newPassword;
   } else {
-    passwordTest.value = "";
+    passTest.value = "";
   }
 }
 
@@ -43,16 +43,16 @@ function getPrompts(){
     return false;
 }
 
-if (confirm("would you like lowercase letters in your password?")) {
+if (confirm("Do you want lowercase letters in your password?")) {
   choiceArray = choiceArray.concat(lowerArray);
 }
-if (confirm("would you like uppercase letters in your password?")) {
+if (confirm("Do you want uppercase letters in your password?")) {
   choiceArray = choiceArray.concat(upperArray);
 }
-if (confirm("would you like special characters in your password?")) {
+if (confirm("Do you want special characters in your password?")) {
   choiceArray = choiceArray.concat(specialArray);
 }
-if (confirm("would you like numbers in your password?")) {
+if (confirm("Do you want numbers in your password?")) {
   choiceArray = choiceArray.concat(numberArray);
 }
   return true;
