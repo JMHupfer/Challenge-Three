@@ -36,8 +36,10 @@ function generatePassword () {
 
 function getPrompts(){
   choiceArray =[];
+// parseInt() function converts the first argument to a string, parses the string, then returns an integer or NaN (parsing) = analyzing a string of symbols either in natural language
+    //computer languages or data structures conforming to the rules of a formal grammar
   characterLength = parseInt(prompt("How many characters do you want your password to be? 8-128 Characters"))
-
+// isNaN is a result of parseInt
   if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
     alert("Character length has to be between 8 - 128 digits. Please try again.");
     return false;
